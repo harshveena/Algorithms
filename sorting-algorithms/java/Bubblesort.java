@@ -22,6 +22,7 @@ class Bubblesort
     {
       arr[i] = ob.nextInt();
     } 
+
     bubble(arr,n);
     
     // Sorted elements are printed.
@@ -30,25 +31,27 @@ class Bubblesort
     {
       System.out.println(arr[i]);
     }
-
+    
   }
   
+  // Method for sorting input elements
   static void bubble(int arr[], int n)
   {
+    
     int temp;
-    for(int i=0; i<n; i++) 
+    for(int i=0; i<n; i++)
     {
     
-      for(int j=0; j<(n-i); j++) 
+      for(int j=0; j<(n-i-1); j++) 
       {
-	if(arr[j]>arr[j+1])
-	{
-	  temp = arr[j];
-	  arr[j] = arr[j+1];
-	  arr[j+1] = temp;
-	}
-
+	       if(arr[j]>arr[j+1])
+	        {
+	          temp = arr[j];
+	          arr[j] = arr[j+1];
+	          arr[j+1] = temp;
+	        }
       }
     }
+    
   }
 }
